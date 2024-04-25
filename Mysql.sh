@@ -12,10 +12,10 @@ VALIDATE(){
 
 if [ $1 -ne 0 ]
 then
-    echo -e " installing my sql...$R FAILURE $N"
+    echo -e "installing my sql...$R FAILURE $N"
     exit 1
 else    
-    echo " installing my sql...$R SUCCESS $N"
+    echo -e "installing my sql...$R SUCCESS $N"
 
 fi
 
