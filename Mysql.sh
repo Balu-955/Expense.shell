@@ -45,8 +45,8 @@ VALIDATE $? "enable mysql"
 systemctl start mysqld &>>$LOGFILE
 VALIDATE $? "start mysql"
 
-mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
-VALIDATE $? "setting Mysql Password"
+# mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
+# VALIDATE $? "setting Mysql Password"
 
 #below code will be usefull for idempotent nature
 
