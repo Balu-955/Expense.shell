@@ -28,6 +28,7 @@ fi
 if [ $USERID -ne 0 ]
 then
     echo " please super user to run this command"
+    exit 1 #manually exit if error comes
 else
     echo " you are super user"
 fi
@@ -46,3 +47,8 @@ VALIDATE $? "start mysql"
 
 mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
 VALIDATE $? "setting Mysql Password"
+
+
+
+
+
