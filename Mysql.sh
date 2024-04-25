@@ -53,7 +53,7 @@ VALIDATE $? "start mysql"
 
 mysql -h 172.31.16.99 -uroot -pExpenseApp@1 -e 'show databases;' &>>$LOGFILE
 
-if [ $1 -ne 0 ]
+if [ $? -ne 0 ]
 
 then
     mysql_secure_installation --set-root-pass ExpenseApp@1 &>>$LOGFILE
