@@ -11,7 +11,7 @@ Y="\e[33m"
 N="\e[0m"
 
 echo "please enter DB password"
-read -s "Mysql password"
+read -s "Mysql_password"
 
 
 VALIDATE(){
@@ -54,12 +54,12 @@ VALIDATE $? "start mysql"
 #below code will be usefull for idempotent nature
 
 
-mysql -h 172.31.16.99 -uroot -p${Mysql password} -e 'show databases;' &>>$LOGFILE
+mysql -h 172.31.16.99 -uroot -p${Mysql_password} -e 'show databases;' &>>$LOGFILE
 
 if [ $? -ne 0 ]
 
 then
-    mysql_secure_installation --set-root-pass ${Mysql password} &>>$LOGFILE
+    mysql_secure_installation --set-root-pass ${Mysql_password} &>>$LOGFILE
     VALIDATE $? "Mysql root password setup"
 else
     echo -e "Mysql root password already setup...$Y SKIPPED $N"
