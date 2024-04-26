@@ -54,7 +54,7 @@ VALIDATE $? "start mysql"
 #below code will be usefull for idempotent nature
 
 
-mysql -h 172.31.16.99 -uroot -p${Mysql_password} -e 'show databases;' &>>$LOGFILE
+mysql -h 172.31.18.43 -uroot -p${Mysql_password} -e 'show databases;' &>>$LOGFILE
 
 if [ $? -ne 0 ]
 
